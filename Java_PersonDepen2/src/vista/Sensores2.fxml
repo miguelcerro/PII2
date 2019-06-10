@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Sensores2Controller">
+   <children>
+      <Button fx:id="volver" layoutX="560.0" layoutY="734.0" mnemonicParsing="false" onAction="#btn_volver" text="Regresar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="430.0" layoutY="18.0" prefHeight="48.0" prefWidth="383.0" text="Cuaderno de Mandos de Sensores " textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="temperature" layoutX="133.0" layoutY="409.0" prefHeight="325.0" prefWidth="360.0" title="Open door">
+         <xAxis>
+            <NumberAxis fx:id="temAxisX" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="temAxisY" side="TOP" upperBound="80.0" />
+         </yAxis>
+      </LineChart>
+      <LineChart fx:id="movement" layoutX="128.0" layoutY="66.0" prefHeight="325.0" prefWidth="370.0" title="Movement">
+        <xAxis>
+          <NumberAxis fx:id="movxis" label="Movimiento" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="movAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <LineChart fx:id="smoke" layoutX="742.0" layoutY="66.0" prefHeight="325.0" prefWidth="360.0" title="Smouke">
+         <xAxis>
+            <NumberAxis fx:id="humAxis" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="humAxis" side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <BarChart fx:id="diary" layoutX="742.0" layoutY="409.0" prefHeight="325.0" prefWidth="360.0" title="Temperature">
+         <xAxis>
+            <CategoryAxis fx:id="openAxis" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="openxAxis" side="TOP" upperBound="80.0" />
+         </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

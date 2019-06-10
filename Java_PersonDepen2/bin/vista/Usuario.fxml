@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="647.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.UsuarioController">
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="243.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Formulario Modificacion Datos">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Label layoutX="58.0" layoutY="56.0" prefHeight="17.0" prefWidth="71.0" text="Nombre" />
+      <TextField fx:id="txt_Nombre" layoutX="58.0" layoutY="83.0" prefHeight="31.0" prefWidth="166.0" />
+      <Label layoutX="243.0" layoutY="60.0" text="Primer Apellido" />
+      <TextField fx:id="txt_Apellido1" layoutX="238.0" layoutY="83.0" prefHeight="31.0" prefWidth="175.0" />
+      <Label layoutX="443.0" layoutY="60.0" text="Segundo Apellido" />
+      <TextField fx:id="txt_Apellido2" layoutX="445.0" layoutY="83.0" prefHeight="31.0" prefWidth="187.0" />
+      <Label layoutX="661.0" layoutY="60.0" text="D.N.I." />
+      <TextField fx:id="txt_DNI" layoutX="661.0" layoutY="83.0" prefHeight="31.0" prefWidth="103.0" />
+      <Label layoutX="58.0" layoutY="140.0" text="Tlf. Móvil " />
+      <TextField fx:id="txt_Movil" layoutX="58.0" layoutY="165.0" prefHeight="31.0" prefWidth="103.0" />
+      <Label layoutX="173.0" layoutY="140.0" prefHeight="17.0" prefWidth="61.0" text="Tlf. Casa " />
+      <TextField fx:id="txt_casa" layoutX="173.0" layoutY="165.0" prefHeight="31.0" prefWidth="103.0" />
+      <Label layoutX="302.0" layoutY="140.0" text="Fecha Nacimiento" />
+      <DatePicker fx:id="fnacimiento" layoutX="302.0" layoutY="165.0" prefHeight="31.0" prefWidth="130.0" />
+      <Label layoutX="481.0" layoutY="140.0" text="Correo " />
+      <TextField fx:id="txt_correo" layoutX="481.0" layoutY="165.0" prefHeight="31.0" prefWidth="187.0" promptText="correo@gmail.com" />
+      <Label layoutX="62.0" layoutY="206.0" text="Calle" />
+      <TextField fx:id="txt_calle" layoutX="58.0" layoutY="226.0" prefHeight="31.0" prefWidth="304.0" />
+      <Label layoutX="703.0" layoutY="206.0" text="Nº" />
+      <TextField fx:id="txt_numeroCalle" layoutX="693.0" layoutY="226.0" prefHeight="31.0" prefWidth="40.0" />
+      <Label layoutX="56.0" layoutY="266.0" prefHeight="17.0" prefWidth="61.0" text="Ciudad" />
+      <TextField fx:id="txt_ciudad" layoutX="58.0" layoutY="292.0" prefHeight="31.0" prefWidth="383.0" />
+      <Label layoutX="396.0" layoutY="206.0" text="Provincia" />
+      <TextField fx:id="txt_provincia" layoutX="396.0" layoutY="227.0" prefHeight="31.0" prefWidth="250.0" />
+      <Label layoutX="538.0" layoutY="266.0" text="CP" />
+      <TextField fx:id="cp" layoutX="537.0" layoutY="292.0" prefHeight="31.0" prefWidth="112.0" />
+      <Button fx:id="guardarcambios" layoutX="596.0" layoutY="444.0" mnemonicParsing="false" onAction="#btn_saveUser" prefHeight="25.0" prefWidth="187.0" text="Guardar Cambios" textAlignment="CENTER" />
+      <Button fx:id="formulariocontacto" layoutX="303.0" layoutY="444.0" mnemonicParsing="false" onAction="#btn_mensajeria" prefHeight="25.0" prefWidth="187.0" text="Formulario de Contacto" textAlignment="CENTER" />
+      <Button fx:id="alertas" layoutX="48.0" layoutY="444.0" mnemonicParsing="false" onAction="#btn_sensores" prefHeight="25.0" prefWidth="187.0" text="Acceso Panel de Graficas" textAlignment="CENTER" />
+      <Button fx:id="cerrar" layoutX="303.0" layoutY="516.0" mnemonicParsing="false" onAction="#btn_CerrarSesion" prefHeight="25.0" prefWidth="187.0" text="Cerrar Sesion" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

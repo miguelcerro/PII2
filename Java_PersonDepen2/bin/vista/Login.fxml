@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="Panel_Login" prefHeight="500.0" prefWidth="320.0" style="-fx-background-color: white;" styleClass="background_app" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controlador.LoginController">
+ 
+	<children>
+		<Button fx:id="btn_EntrarLogin" defaultButton="true" layoutX="52.0" layoutY="432.0" mnemonicParsing="false" onAction="#btn_EntrarLogin_Action" prefHeight="31.0" prefWidth="218.0" text="Entrar">
+			<font>
+				<Font name="System Bold" size="17.0" />
+			</font>
+		</Button>
+		<TextField fx:id="txtF_Usuario" layoutX="50.0" layoutY="296.0" prefHeight="31.0" prefWidth="218.0" promptText="Nombre usuario" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+		<Pane layoutX="38.0" layoutY="135.0" prefHeight="32.0" prefWidth="35.0" />
+		<ImageView fx:id="img_LoginPrincipal" disable="true" fitHeight="280.0" fitWidth="320.0" layoutX="-4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" styleClass="background_app" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<image>
+				<Image url="@../_imagenes/picture_1.jpg" />
+			</image>
+		</ImageView>
+		<CheckBox fx:id="chk_recordadContrasenia" layoutX="49.0" layoutY="390.0" mnemonicParsing="false" text="Recordar contraseña" />
+      <PasswordField fx:id="txtF_Contrasenia" layoutX="50.0" layoutY="341.0" prefHeight="31.0" prefWidth="217.0" promptText="Contraseña" />
+      <Label fx:id="labelLoginMensaje" layoutX="4.0" layoutY="476.0" prefHeight="21.0" prefWidth="309.0" textFill="#c71a1a" />
+	</children>
+</AnchorPane>

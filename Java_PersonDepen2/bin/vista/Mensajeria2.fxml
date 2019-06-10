@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="647.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MensajeriaController">
+   <children>
+      <Button layoutX="752.0" layoutY="596.0" mnemonicParsing="false" onAction="#btn_exit" text="Regresar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="17.0" layoutY="23.0" text="Mensajeria" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="20.0" layoutY="47.0" prefHeight="502.0" prefWidth="795.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="0.0" prefWidth="169.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="10.0" prefWidth="130.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.0" minWidth="10.0" prefWidth="496.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Fecha / Hora" GridPane.halignment="CENTER" />
+            <Label text="Enviado" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label text="Texto" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+            <TextField fx:id="time_1" GridPane.rowIndex="1" />
+            <TextField fx:id="time_2" GridPane.rowIndex="2" />
+            <TextField fx:id="time_3" GridPane.rowIndex="3" />
+            <TextField fx:id="time_4" GridPane.rowIndex="4" />
+            <TextField fx:id="time_5" GridPane.rowIndex="5" />
+            <TextField fx:id="time_6" GridPane.rowIndex="6" />
+            <TextField fx:id="time_7" GridPane.rowIndex="7" />
+            <TextField fx:id="time_8" GridPane.rowIndex="8" />
+            <TextField fx:id="time_9" GridPane.rowIndex="9" />
+            <TextField fx:id="time_10" GridPane.rowIndex="10" />
+            <TextField fx:id="time_11" GridPane.rowIndex="11" />
+            <TextField fx:id="time_12" GridPane.rowIndex="12" />
+            <TextField fx:id="time_13" GridPane.rowIndex="13" />
+            <TextField fx:id="time_14" GridPane.rowIndex="14" />
+            <TextField fx:id="time_15" GridPane.rowIndex="15" />
+            <TextField fx:id="time_16" GridPane.rowIndex="16" />
+            <TextField fx:id="time_17" GridPane.rowIndex="17" />
+            <TextField fx:id="time_18" GridPane.rowIndex="18" />
+            <TextField fx:id="time_19" GridPane.rowIndex="19" />
+            <TextField fx:id="time_20" GridPane.rowIndex="20" />
+            <TextField fx:id="envio_2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="envio_3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="envio_4" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="envio_5" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="envio_6" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="envio_7" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="envio_1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="envio_8" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="envio_9" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="envio_10" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField fx:id="envio_11" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <TextField fx:id="envio_12" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <TextField fx:id="envio_13" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <TextField fx:id="envio_14" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <TextField fx:id="envio_15" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <TextField fx:id="envio_16" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+            <TextField fx:id="envio_17" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <TextField fx:id="envio_18" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+            <TextField fx:id="envio_19" GridPane.columnIndex="1" GridPane.rowIndex="19" />
+            <TextField fx:id="envio_20" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+            <TextField fx:id="txt_1" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="txt_2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="txt_3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="txt_4" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="txt_5" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="txt_6" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="txt_7" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="txt_8" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <TextField fx:id="txt_9" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <TextField fx:id="txt_10" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <TextField fx:id="txt_11" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <TextField fx:id="txt_12" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+            <TextField fx:id="txt_13" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+            <TextField fx:id="txt_14" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+            <TextField fx:id="txt_15" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+            <TextField fx:id="txt_16" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+            <TextField fx:id="txt_17" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+            <TextField fx:id="txt_18" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+            <TextField fx:id="txt_19" GridPane.columnIndex="2" GridPane.rowIndex="19" />
+            <TextField fx:id="txt_20" GridPane.columnIndex="2" GridPane.rowIndex="20" />
+         </children>
+      </GridPane>
+      <TextField fx:id="new_sms" layoutX="20.0" layoutY="590.0" prefHeight="25.0" prefWidth="414.0" AnchorPane.leftAnchor="20.0" />
+      <Button layoutX="440.0" layoutY="590.0" mnemonicParsing="false" onAction="#btn_enviar" text="Enviar" />
+      <Label layoutX="20.0" layoutY="564.0" text="Escribir nuevo mensaje" />
+   </children>
+</AnchorPane>

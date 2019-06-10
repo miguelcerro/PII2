@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="menuAdm_1_AnchorPane" prefHeight="610.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.AdministradorController">
+   <children>
+      <SplitPane fx:id="menuAdm_1_1_SplitPane" dividerPositions="0.7549295774647887" layoutY="-1.0" prefHeight="560.0" prefWidth="1065.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="menuAdm_1_1_1_AnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="798.0">
+               <children>
+                  <TabPane fx:id="menuAdm_1_1_1_1_TabPane" layoutY="6.0" prefHeight="550.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="menuAdm_1_1_1_1_1_Tab_ListUsu" onSelectionChanged="#Tab_ListUsu_SelectionChanged" text="Listado Usuarios">
+                          <content>
+                              <TableView fx:id="Tbl_Tab_ListUsu_Admin" onMouseClicked="#Tbl_Tab_ListUsu_Admin_Click" prefHeight="510.0" prefWidth="806.0">
+                                <columns>
+                                    <TableColumn fx:id="TblCol_Tab_ListUsu_Admin_Rol" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" text="Rol" />
+                                  <TableColumn fx:id="TblCol_Tab_ListUsu_Admin_Nombre" maxWidth="400.0" minWidth="120.0" prefWidth="200.0" text="Nombre" />
+                                  <TableColumn fx:id="TblCol_Tab_ListUsu_Admin_Apellido1" maxWidth="400.0" minWidth="120.0" prefWidth="176.0" text="1º Apellido" />
+                                    <TableColumn fx:id="TblCol_Tab_ListUsu_Admin_Apellido2" maxWidth="400.0" minWidth="100.0" prefWidth="192.0" resizable="false" text="2º Apellido" />
+                                    <TableColumn fx:id="TblCol_Tab_ListUsu_Admin_Dni" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" text="D.N.I." />
+                                </columns>
+                              </TableView>
+                           </content>
+                      </Tab>
+                      <Tab fx:id="menuAdm_1_1_1_1_2_Tab_DetUsu" onSelectionChanged="#Tab_DetUsu_SelectionChanged" text="Detalle Usuario">
+                        <content>
+                          <AnchorPane fx:id="menuAdm_1_1_1_1_2_1_AnchorPanel_DetUsu" minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="108.0">
+                                 <children>
+                                    <Label layoutX="143.0" layoutY="50.0" text="Nombre (*)" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="50.0" />
+                                    <TextField fx:id="txt_Tab_Det_Nombre" layoutX="137.0" layoutY="73.0" prefHeight="31.0" prefWidth="183.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="70.0" />
+                                    <Label layoutX="233.0" layoutY="50.0" text="Primer Apellido (*)" AnchorPane.topAnchor="50.0" />
+                                    <TextField fx:id="txt_Tab_Det_Apellido1" layoutX="233.0" layoutY="70.0" prefHeight="31.0" prefWidth="212.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="70.0" />
+                                    <Label layoutX="433.0" layoutY="50.0" text="Segundo Apellido (*)" AnchorPane.leftAnchor="465.0" AnchorPane.topAnchor="50.0" />
+                                    <TextField fx:id="txt_Tab_Det_Apellido2" layoutX="452.0" layoutY="70.0" prefHeight="31.0" prefWidth="206.0" AnchorPane.leftAnchor="452.0" AnchorPane.topAnchor="70.0" />
+                                    <Label layoutX="697.0" layoutY="50.0" text="D.N.I. (*)" AnchorPane.leftAnchor="697.0" AnchorPane.topAnchor="50.0" />
+                                    <TextField fx:id="txt_Tab_Det_DNI" layoutX="674.0" layoutY="70.0" onAction="#txt_Tab_Det_DNI_Action" prefHeight="31.0" prefWidth="103.0" AnchorPane.leftAnchor="674.0" AnchorPane.topAnchor="70.0" />
+                                    <Label layoutX="175.0" layoutY="106.0" text="Tlf. Móvil" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="106.0" />
+                                    <TextField fx:id="txt_Tab_Det_telefonoMovil" layoutX="134.0" layoutY="126.0" prefHeight="31.0" prefWidth="130.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="125.0" />
+                                    <Label layoutX="277.0" layoutY="106.0" text="Tlf. Casa(*)" AnchorPane.leftAnchor="185.0" AnchorPane.topAnchor="106.0" />
+                                    <TextField fx:id="txt_Tab_Det_telefonoCasa" layoutX="179.0" layoutY="126.0" prefHeight="31.0" prefWidth="130.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="125.0" />
+                                    <Label layoutX="375.0" layoutY="106.0" text="Fecha Nacimiento" AnchorPane.leftAnchor="335.0" AnchorPane.topAnchor="106.0" />
+                                    <TextField fx:id="Date_Tab_Det_fechaNacimiento" layoutX="329.0" layoutY="126.0" prefHeight="31.0" prefWidth="130.0" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="125.0" />
+                                    <Label layoutX="510.0" layoutY="106.0" text="Correo (*)" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="106.0" />
+                                    <TextField fx:id="txt_Tab_Det_correo" layoutX="475.0" layoutY="126.0" prefHeight="31.0" prefWidth="257.0" promptText="correo@gmail.com" AnchorPane.leftAnchor="475.0" AnchorPane.topAnchor="125.0" />
+                                    <Label layoutX="744.0" layoutY="106.0" text="Foto" AnchorPane.topAnchor="106.0" />
+                                    <Button fx:id="btn_Adm_FotoUsuario" alignment="TOP_CENTER" contentDisplay="CENTER" ellipsisString="path_foto" layoutX="744.0" layoutY="126.0" mnemonicParsing="false" onAction="#btn_Adm_FotoUsuario_Action" prefHeight="0.0" prefWidth="33.0" text="..." AnchorPane.topAnchor="125.0" />
+                                    <Label layoutX="65.0" layoutY="196.0" text="Calle" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="160.0" />
+                                    <TextField fx:id="txt_Tab_Det_calle" layoutX="60.0" layoutY="216.0" prefHeight="31.0" prefWidth="619.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="180.0" />
+                                    <Label layoutX="694.0" layoutY="207.0" text="Nº" AnchorPane.leftAnchor="670.0" AnchorPane.topAnchor="160.0" />
+                                    <TextField fx:id="txt_Tab_Det_numeroCalle" layoutX="664.0" layoutY="180.0" prefHeight="31.0" prefWidth="112.0" AnchorPane.leftAnchor="665.0" AnchorPane.topAnchor="180.0" />
+                                    <Label layoutX="65.0" layoutY="247.0" text="Ciudad" AnchorPane.leftAnchor="35.0" AnchorPane.topAnchor="215.0" />
+                                    <TextField fx:id="txt_Tab_Det_ciudad" layoutX="60.0" layoutY="258.0" prefHeight="31.0" prefWidth="383.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="235.0" />
+                                    <Label layoutX="464.0" layoutY="246.0" text="Provincia" AnchorPane.leftAnchor="435.0" AnchorPane.topAnchor="215.0" />
+                                    <TextField fx:id="txt_Tab_Det_provincia" layoutX="429.0" layoutY="266.0" prefHeight="31.0" prefWidth="250.0" AnchorPane.leftAnchor="430.0" AnchorPane.topAnchor="235.0" />
+                                    <Label layoutX="700.0" layoutY="258.0" text="CP" AnchorPane.leftAnchor="700.0" AnchorPane.topAnchor="215.0" />
+                                    <Label layoutX="35.0" layoutY="322.0" text="Nombre" AnchorPane.leftAnchor="35.0" />
+                                    <TextField fx:id="txt_Tab_Det_NombreSuper" layoutX="30.0" layoutY="347.0" prefHeight="31.0" prefWidth="183.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="347.0" />
+                                    <Label layoutX="235.0" layoutY="322.0" text="Primer Apellido" AnchorPane.leftAnchor="235.0" />
+                                    <TextField fx:id="txt_Tab_Det_ApellidoSuper" layoutX="229.0" layoutY="347.0" prefHeight="31.0" prefWidth="212.0" AnchorPane.leftAnchor="229.0" AnchorPane.topAnchor="347.0" />
+                                    <Label layoutX="465.0" layoutY="322.0" text="Segundo Apellido" AnchorPane.leftAnchor="465.0" />
+                                    <TextField fx:id="txt_Tab_Det_Apellido2Super" layoutX="460.0" layoutY="347.0" prefHeight="31.0" prefWidth="214.0" AnchorPane.leftAnchor="460.0" AnchorPane.topAnchor="347.0" />
+                                    <Label layoutX="701.0" layoutY="322.0" text="DNI (*)" AnchorPane.leftAnchor="701.0" AnchorPane.topAnchor="322.0" />
+                                    <TextField fx:id="txt_Tab_Det_Id" layoutX="690.0" layoutY="347.0" onAction="#txt_Tab_Det_Id_Action" prefHeight="31.0" prefWidth="87.0" AnchorPane.leftAnchor="690.0" AnchorPane.topAnchor="347.0" />
+                                    <Label layoutX="76.0" layoutY="445.0" text="Nombre Usuario" AnchorPane.leftAnchor="76.0" AnchorPane.topAnchor="445.0" />
+                                    <TextField fx:id="txt_Tab_Det_nombreUsuario" layoutX="37.0" layoutY="465.0" prefHeight="31.0" prefWidth="267.0" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="465.0" />
+                                    <Label layoutX="356.0" layoutY="442.0" text="Contraseña" AnchorPane.topAnchor="442.0" />
+                                    <TextField fx:id="txt_Tab_Det_contrasenia" layoutX="320.0" layoutY="465.0" prefHeight="31.0" prefWidth="265.0" AnchorPane.topAnchor="465.0" />
+                                    <Label layoutX="600.0" layoutY="447.0" text="Tipo de usuario (*)" AnchorPane.topAnchor="447.0" />
+                                    <ComboBox fx:id="cbo_Tab_Det_tipoUsuario" layoutX="601.0" layoutY="467.0" onAction="#cbo_Tab_Det_tipoUsuario_Action" prefHeight="31.0" prefWidth="182.0" style="-fx-background-color: white;" styleClass="background_app" AnchorPane.topAnchor="467.0" />
+                                    <TextField fx:id="txt_Tab_Det_CP" layoutX="695.0" layoutY="278.0" prefHeight="31.0" prefWidth="80.0" AnchorPane.leftAnchor="695.0" AnchorPane.topAnchor="235.0" />
+                                    <Line endX="806.0" layoutX="133.0" layoutY="200.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="280.0" />
+                                    <Text fontSmoothingType="LCD" layoutX="295.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS PERSONALES">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fontSmoothingType="LCD" layoutX="261.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ASIGNACIÓN SUPERVISOR" textAlignment="CENTER" AnchorPane.leftAnchor="261.0" AnchorPane.topAnchor="287.0">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Line endX="806.0" layoutX="143.0" layoutY="215.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="400.0" />
+                                    <Text fontSmoothingType="LCD" layoutX="332.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS LOGIN" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Text>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <TextField fx:id="txt_Filtro" layoutX="464.0" layoutY="570.0" prefHeight="31.0" prefWidth="300.0" promptText="Introduzca Filtro" />
+                  <Label fx:id="lbl_filtro" layoutX="303.0" layoutY="572.0" text="Filtro Multiples Campos" />
+                  <Label fx:id="lbl_CamposObligatorios" layoutX="44.0" layoutY="572.0" prefHeight="21.0" prefWidth="186.0" text="(*) campos Obligatorios" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="menuAdm_1_1_2_AnchorPane" focusTraversable="true" minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="216.0" style="-fx-background-color: white;" styleClass="background_app">
+               <children>
+                  <Button fx:id="btn_Adm_NuevoUsuario" defaultButton="true" layoutY="265.0" mnemonicParsing="false" onAction="#btn_Adm_NuevoUsuario_Action" prefHeight="60.0" prefWidth="265.0" text="Nuevo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="350.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_Adm_BorrarUsuarioio11" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="-60.0" x="-50.0">
+                           <image>
+                              <Image url="@../_imagenes/2(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btn_Adm_ModificarUsuario" defaultButton="true" layoutY="325.0" mnemonicParsing="false" onAction="#btn_Adm_ModificarUsuario_Action" prefHeight="60.0" prefWidth="265.0" text="Modificar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="470.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_Adm_ModificarUsuario" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="-45.0" x="20.0" y="315.0">
+                           <image>
+                              <Image url="@../_imagenes/2(10).png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btn_Adm_BorrarUsuario" defaultButton="true" layoutY="325.0" mnemonicParsing="false" onAction="#btn_Adm_BorrarUsuario_Action" prefHeight="60.0" prefWidth="265.0" text="Borrar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="410.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_Adm_BorrarUsuario" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="-55.0">
+                           <image>
+                              <Image url="@../_imagenes/2(3).png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btn_Adm_AniadirUsuario" defaultButton="true" layoutX="2.0" layoutY="370.0" mnemonicParsing="false" onAction="#btn_Adm_AniadirUsuario_Action" prefHeight="60.0" prefWidth="130.0" text="Añadir / Modificar" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="470.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_Adm_NuevoUsuario" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                           <image>
+                              <Image url="@../_imagenes/2.%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Adm_RetrocederUsuario" contentDisplay="TOP" defaultButton="true" layoutY="174.0" mnemonicParsing="false" onAction="#btn_Adm_RetrocederUsuario_Action" prefHeight="100.0" prefWidth="130.0" text="Retroceder" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="250.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_Adm_Retroceder" fitHeight="59.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../_imagenes/2(5).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Adm_Salir" cancelButton="true" defaultButton="true" layoutX="39.0" layoutY="458.0" mnemonicParsing="false" onAction="#btn_ListUsu_Salir_Action" prefHeight="60.0" prefWidth="172.0" text="Salir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="530.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_Adm_Salir" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" translateX="-60.0">
+                           <image>
+                              <Image url="@../_imagenes/043.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Adm_Volver" defaultButton="true" layoutY="419.0" mnemonicParsing="false" onAction="#btn_Adm_Volver_Action" prefHeight="50.0" prefWidth="257.0" text="      Volver sin Guardar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="530.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_Adm_Volver" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../_imagenes/043.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Label layoutX="501.0" layoutY="347.0" text="Tipo de usuario" />
+                  <Button fx:id="btn_Adm_AvanzarUsuario" contentDisplay="TOP" defaultButton="true" layoutX="129.0" layoutY="173.0" mnemonicParsing="false" onAction="#btn_Adm_AvanzarUsuario_Action" prefHeight="100.0" prefWidth="130.0" text="Avanzar" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="250.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="img_Adm_avanzar" fitHeight="59.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../_imagenes/2(6).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fx:id="img_Adm_Usuario" fitHeight="186.0" fitWidth="186.0" layoutX="38.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: white;" styleClass="background_app">
+                     <image>
+                        <Image url="@../_imagenes/001.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txt_NombreFoto" layoutX="34.0" layoutY="219.0" />
+                  <TextField fx:id="txt_aux" layoutX="221.0" layoutY="7.0" prefHeight="31.0" prefWidth="31.0" />
+               </children>
+               <effect>
+                  <Blend mode="COLOR_BURN" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -284,18 +284,18 @@ cargar();
 		btn_Adm_ModificarUsuario.setVisible(false);
 		btn_Adm_BorrarUsuario.setVisible(false);
 		btn_Adm_Salir.setVisible(false);
-
+//
 		btn_Adm_AniadirUsuario.setText("Añadir");
 		btn_Adm_AniadirUsuario.setVisible(true);
 		btn_Adm_Volver.setVisible(true);
 
 		menuAdm_1_1_1_1_1_Tab_ListUsu.setDisable(true);
 		menuAdm_1_1_1_1_TabPane.getSelectionModel().select(menuAdm_1_1_1_1_2_Tab_DetUsu);// Toma foco tab Detalle
-
+//
 		menuAdm_1_1_1_1_2_Tab_DetUsu.setDisable(false);
 		menuAdm_1_1_1_1_2_Tab_DetUsu.setText("Nuevo Usuario");
 		limpiarDatosDetalleUsuario();
-		
+//		
 		//cargamos imagen de icono
 		Image image = new Image("/_imagenes/001.png");
 		img_Adm_Usuario.setImage(image);
@@ -526,17 +526,17 @@ cargar();
 	public void Tab_DetUsu_SelectionChanged(Event event) {
 
 		posicionUsuarioEnTabla = Tbl_Tab_ListUsu_Admin.getSelectionModel().getSelectedIndex();
-
+//
 		if (menuAdm_1_1_1_1_TabPane.getSelectionModel().getSelectedItem().isSelected()) {// si el TAB esta seleccionada
-			/* Fuerza a que este seleccionada una fila */
+//			/* Fuerza a que este seleccionada una fila */
 			if (posicionUsuarioEnTabla == -1) {
 				posicionUsuarioEnTabla = 0;
 			}
-			/* Desactiva el filtro */
+//			/* Desactiva el filtro */
 			txt_Filtro.setVisible(false);
 			lbl_filtro.setVisible(false);
-
-			/* Rellena los campos */
+//
+//			/* Rellena los campos */
 			Tbl_Tab_ListUsu_Admin.getSelectionModel().select(posicionUsuarioEnTabla);// seleccion de fila
 			rellenarDatosDetalleUsuario(posicionEnArray());
 		}

@@ -23,7 +23,9 @@ import java.sql.PreparedStatement;
 public class HandlerBBDD {
 
 	private static String loginSQL = "SELECT * FROM usuarios WHERE login =?";
-	private static String cargarSQL = "SELECT * FROM usuarios";
+	private static String cargarSQL = "select nombre,apellido1,apellido2,dni,TelefonoMovil,TelefonoCasa,fNacimiento,correo,img_fotousuario,calle,numerocalle,ciudad,provincia,cp,login,password,rolDescripcion " + 
+			"from mydb.usuarios, mydb.roles " + 
+			"where idRole=rol;";
 	private static String insertSQL = "INSERT INTO usuarios VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	private static String updateSQL = "UPDATE usuarios SET (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) WHERE login = ?";
 	private static String deleteSQL = "DELETE FROM usuarios WHERE login = ?";
@@ -31,7 +33,11 @@ public class HandlerBBDD {
 	private static String buscarMensajeSQL = "SELECT * FROM mensajes WHERE idmensaje = ?";
 	private static String insertarMensaje = "INSERT INTO mensajes VALUES (?,?,?,?)";
 	private static String insertarRelacionUsuarioMensaje = "INSERT INTO relacionusuariomesaje VALUES (?,?)";
-	private static String leerListadoPacientes = "SELECT * FROM pacientes WHERE idSupervisor = ?";
+	private static String leerListadoPacientes = "select rolDescripcion,nombre,apellido1,apellido2,dni,TelefonoMovil,TelefonoCasa,fNacimiento,correo,calle,numerocalle,ciudad,provincia,cp " + 
+			"from mydb.usuarios, mydb.roles " + 
+			"where idRole=rol";
+	
+
 
 	private static HandlerBBDD bbdd = null;
 	private Connection conexion;
@@ -157,9 +163,11 @@ public class HandlerBBDD {
 	
 
 		ResultSet resultado = sentencia.executeQuery();
-
+		String borrar;
 		while(resultado.next()) {
+			borrar = resultado.getString("rolDescripcion");
 			lista.add(new User(resultado.getString(4),
+					       
 							resultado.getString("nombre"),
 							resultado.getString("apellido1"),
 							resultado.getString("apellido2"),
@@ -176,7 +184,7 @@ public class HandlerBBDD {
 							resultado.getString("cp"),
 							resultado.getString("login"),
 							resultado.getString("password")
-							, resultado.getString("rol")
+							, resultado.getString("rolDescripcion")
 							));
 		}
 		}catch(SQLException e) {
